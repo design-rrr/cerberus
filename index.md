@@ -3,7 +3,7 @@ layout: default
 title: Cerberus Protocol
 nav_order: 0
 summary: A comprehensive security framework for institutional-grade cryptocurrency custody without third-party custodians.
-image: /assets/title.png
+image: /assets/cerberus_title.png
 ---
 
 IMPORTANT: This protocol is under development and not yet ready for use.
@@ -11,7 +11,7 @@ IMPORTANT: This protocol is under development and not yet ready for use.
 
 # Cerberus Protocol
 
-![The Cerberus Protocol](/assets/title.png)
+![The Cerberus Protocol](/assets/cerberus_title.png)
 
 Welcome to the Cerberus Protocol documentation. This protocol provides a comprehensive security framework designed for organizations seeking institutional-grade cryptocurrency custody without relying on third-party custodians.
 
