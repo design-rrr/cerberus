@@ -3,7 +3,7 @@ layout: default
 title: 2. Preparation
 nav_order: 2
 summary: Absolutely everything that is needed to prepare for the execution of the Setup Ceremony section of the Cerberus Protocol.
-image: /assets/cerberus_preparation.png
+image: /assets/preparation.png
 ---
 
 IMPORTANT: This protocol is under development and not yet ready for use.
@@ -12,7 +12,7 @@ IMPORTANT: This protocol is under development and not yet ready for use.
 Preparation
 ===========
 
-![Required Equipment](/assets/cerberus_preparation.png)
+![Required Equipment](/assets/preparation.png)
 
 This chapter will cover absolutely everything that is needed to prepare for the execution of the _Setup Ceremony_ section of the Cerberus Protocol.
 
@@ -40,7 +40,7 @@ Assign a number to each signatory. For the purposes of making outbound transacti
      
 * [ ] **1.3. Designate a "Master of Ceremony" (MC)**
 
-The Master of Ceremony (MC) has the responsibility to guide the setup ceremony to make sure each signatory is following the protocal as described. Select the MC from the three signatories--ideally the signatory who is most patient and process-oriented.
+The Master of Ceremony (MC) has the responsibility to guide the setup ceremony to make sure each signatory is following the protocol as described. Select the MC from the three signatories--ideally the signatory who is most patient and process-oriented.
 
 | NOTE |
 | - |
@@ -133,8 +133,32 @@ Install Electrum using the file you just downloaded.
 
 To ensure your installation of Electrum is secure, you need to cryptographically verify the software.
 
-* **Mac:** [Instructions coming soon]
-* **Windows:** [Instructions coming soon]
+* **Mac:**
+  1. Download the Electrum GPG public key by visiting https://electrum.org/gpg-key
+  2. Open Terminal (use Spotlight and search for "Terminal")
+  3. Import the Electrum GPG key using the command:
+     ```
+     curl https://electrum.org/pubkeys/ThomasV.asc | gpg --import
+     ```
+  4. Verify the signature on the downloaded Electrum disk image file:
+     ```
+     gpg --verify electrum-4.4.6.dmg.asc electrum-4.4.6.dmg
+     ```
+     (Replace 4.4.6 with the actual version number of your downloaded file)
+  5. Check that the output shows "Good signature" and that the key fingerprint matches the one on the official Electrum website
+
+* **Windows:**
+  1. Install GPG4Win from https://www.gpg4win.org/
+  2. Download the Electrum GPG public key from https://electrum.org/gpg-key
+  3. Import the key using Kleopatra (included with GPG4Win):
+     - Open Kleopatra
+     - Select "Import" from the menu
+     - Browse to the downloaded key file
+  4. Verify the installer signature:
+     - Right-click on the Electrum signature file (.asc) 
+     - Select "More GpgEX options" > "Verify"
+     - Ensure the verification confirms "Good signature"
+     - Check that the key fingerprint matches the one listed on the official Electrum website
     
 | NOTE |
 | - |
@@ -231,7 +255,7 @@ Check off each item as they are received and do not unseal. Keep items together 
 
    * [ ] 3 x Trezor One
    * [ ] 1 x 100-pack of 9-by-12-inch tamper-evident deposit bags
-   * [ ] 1 x 300-pack of heavy weight ruled lined index cards
+   * [ ] 1 x 300-pack of heavy weight ruled lined index cards (not listed in Amazon purchases above)
    * [ ] 1 x 8-pack of fine point Sharpies
    * [ ] 1 x 4-pack of privacy boards
 
@@ -266,6 +290,8 @@ Verbally confirm that each signatory has completed the necessary tasks before th
 
 ***
 
-**Well done! If the instructions have been followed correctly, your team should now have everything ready for the setup ceremony. You (the MC) and your fellow signatories can put your feet up and comfortably wait till the scheduled ceremony date.**
+**Well done! If the instructions have been followed correctly, your team should now have everything ready for the Setup Ceremony. You (the MC) and your fellow signatories can put your feet up and comfortably wait till the scheduled ceremony date.**
+
+When ready, proceed to the [3. Setup Ceremony](/3_setup_ceremony.md) section.
 
 ***

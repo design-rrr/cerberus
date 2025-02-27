@@ -1,103 +1,70 @@
 ---
 layout: default
-title: 1. Overview
-nav_order: 1
-summary: A step-by-step protocol for companies to securely store bitcoin investments without the need for a third-party custodian.
-image: /assets/cerberus_title.png
+title: Cerberus Protocol
+nav_order: 0
+summary: A comprehensive security framework for institutional-grade cryptocurrency custody without third-party custodians.
+image: /assets/title.png
 ---
 
 IMPORTANT: This protocol is under development and not yet ready for use.
 {: .label .label-red }
 
-Overview
-========
+# Cerberus Protocol
 
-![The Cerberus Protocol](/assets/cerberus_title.png)
+![The Cerberus Protocol](/assets/title.png)
 
-## Introduction
+Welcome to the Cerberus Protocol documentation. This protocol provides a comprehensive security framework designed for organizations seeking institutional-grade cryptocurrency custody without relying on third-party custodians.
 
-The Cerberus Protocol is a step-by-step protocol for **companies** to securely store **bitcoin investments** without the need for a third-party custodian.
+## Getting Started
 
-The protocol combines both *technical* and *procedural* guidance for bitcoin storage:
-- **Technical:** Open source bitcoin hardware and software recommendations to securely distribute control, ensuring no single point of failure.
-- **Procedural:** Policies to ensure that any incoming or outgoing transactions are conducted under strict checks and balances.
+**Start here**: [0. Overview & Quick Reference](/0_quick_reference.md)
 
-Cerberus is a fully open source protocol, authored and reviewed by bitcoin industry veterans, taking inspiration from excellent open-source work such as the [Glacier Protocol](https://glacierprotocol.org/).
+This overview provides a complete map of the protocol, key roles and responsibilities, essential equipment requirements, and quick reference guides for critical procedures.
 
-### Cerberus is intended for:
-* **Companies:** The bitcoin are owned by a collective entity rather than a single individual. Usually this will be an incorporated company.
-* **Bitcoin investments:** Long-term bitcoin storage with a low transaction frequency (a handful of transactions per month).
-* **Technically-unskilled users:** No software engineering or bitcoin expertise should be required. Just follow the steps.
-* **Fast deployment:** Cerberus is designed to be lean and focused, so that your company can get going as quickly as possible.
+**Next steps**:
+1. Review the [1. Introduction](/1_introduction.md) to understand the principles and structure
+2. Follow the [2. Preparation](/2_preparation.md) steps to assemble your team and equipment
+3. Execute the [3. Setup Ceremony](/3_setup_ceremony.md) to establish your secure multisignature wallet
 
-### Cerberus Minimum Requirements
-Acquiring all the necessary items to setup the protocol is covered in **Preparation**, but to avoid any surprises, users should ensure they will have access to the following:
-* Three trusted employees
-* Three [Trezor Ones](https://shop.trezor.io/product/trezor-one-white) (total cost less than USD 300)
-* Three Windows/MacOS computers
-* A printer
-* Access to [safe deposit box](https://en.wikipedia.org/wiki/Safe_deposit_box) providers near your home or office (e.g. banks or private vaults)
-* A free afternoon to follow the **Setup** section of the protocol
+## Who is Cerberus For?
 
-## Why Cerberus?
+The Cerberus Protocol is specifically designed for:
 
-```c
-"Not your keys, not your bitcoin."
-- Bitcoin proverb
-```
+* **Organizations**: Companies, foundations, and institutions (rather than individuals)
+* **Significant Holdings**: Entities with cryptocurrency assets worth protecting with robust security measures
+* **Long-term Storage**: Organizations primarily holding cryptocurrency as an investment rather than for frequent transactions
+* **Technical Pragmatists**: Teams that need strong security but don't have specialized cryptocurrency expertise
 
-Currently, the vast majority of bitcoin storage guidance is written for personal bitcoin holdings. But a company investing in bitcoin has _very different_ security needs compared to an individual.
+## Key Benefits
 
-Due to the lack of self-storage options, companies are commonly resorting to trusted custodians. This poses serious risks, as companies' bitcoin investments are concentrated in honey pots that are highly attractive to potential attackers. A bitcoin custodian represents an easily-targeted, well-known single point of failure.
+* **Distributed Security**: No single point of failure through 2-of-3 multisignature arrangement
+* **Operational Resilience**: Business continuity regardless of personnel changes
+* **Physical Security**: Multiple layers of protection for both hardware and recovery information
+* **Procedural Controls**: Well-defined roles and processes that minimize human error
+* **Independence**: Complete control without reliance on third-party custodians
+* **Comprehensive Documentation**: Step-by-step guidance for all operational scenarios
 
-**Cerberus was produced as an easy-to-follow, quick-to-execute protocol to specifically address the unique requirements for companies self-storing bitcoin.**
+## Core Principles
 
-Thanks to the amazing work of the bitcoin industry's open source community and entrepreneurs, Cerberus is also inexpensive to set up, making highly-secure, industry-standard storage accessible to even the smallest of companies.
+Throughout the implementation of the Cerberus Protocol, adherence to these core principles is essential:
 
-## Key Concepts
-To follow the protocol, users may need to first familiarise with a few key terms:
+* **Separation of Duties**: No single individual should have complete control or knowledge
+* **Defense in Depth**: Multiple security layers protect against different types of threats
+* **Procedural Discipline**: Strict adherence to documented procedures prevents shortcuts
+* **Physical Security**: Both hardware wallets and recovery information must be physically secured
+* **Verifiable Execution**: All critical steps must be observable and independently verifiable
+* **Minimal Complexity**: Procedures are designed to be as simple as possible while maintaining security
 
-| **Wallet** | A collection of addresses with associated private keys, generated from a seed phrase. |
-| **Address** | An address that can be shared with third parties who are sending your company bitcoin. A wallet consists of multiple addresses, and a new address should be used to receive each new transaction.
-| **Private key** | Bitcoin transactions are controlled through private keys. Outgoing transactions must be signed with a corresponding private key. Often referred to as "key" in Cerberus for brevity. |
-| **Hardware wallet** | A device used to manage private keys offline. |
-| **Seed phrase** | A string of words that can be used to restore a hardware wallet. Used as a backup in case of key loss. |
-| **Multisig** | A method of storing bitcoin that requires signatures from multiple private keys to make an outgoing transactions. |
-| **Signatory** | An individual that manages a hardware wallet (and associated seed phrase) on behalf of the organisation. |
+## Minimum Requirements
 
-![Diagram of wallet structure](/assets/bitcoin_wallet_structure.png)
-_A diagram showing the relationship between addresses, keys, wallets, seed phrases, and hardware wallets._
+Implementing the Cerberus Protocol requires:
 
-## How It Works
-
-### Distributing Control
-Cerberus uses bitcoin **multisig** to distribute control over your company's bitcoin investment across three **signatories**. Cerberus uses what's called a **2-of-3 multisig**, which means that there are three **private keys** per **address**, and at least two of those keys are required to make any outgoing transactions.
-
-Each of the three signatories holds a **hardware wallet** which manages their set of private keys. They also store a seed phrase at a secure location that only they have access to, which acts as a backup in case anything goes wrong. Both the management and storage of the hardware wallet and seed are outlined in the protocol.
-
-### Sending and Receiving
-To receive bitcoin a transaction, any of the three signatories can provide a bitcoin address to the sender. While this is a simple process, Cerberus provides guidelines to minimise the risk of the bitcoin being sent to the wrong place.
-
-To send a bitcoin transaction, any of the three signatories should create a transaction and sign it, before sharing the signed transaction file with one more signatory for final signature and broadcast. Cerberus provides a strict protocol for signatories to share transaction details to ensure that all outbound transactions are according to the true intent of the company.
-
-### Issue Resolution
-Finally, in the case of a hardware wallet failure, loss, or the replacement of a signatory (e.g. in the case of a staff termination), Cerberus walks you through how to resolve the issue in a secure, prompt manner.
-
-## Structure
-The protocol is split into eight sections:
-
-| 1 | **Overview** | A brief explainer on the purpose of the Cerberus Protocol. |
-| 2 | **Preparation** | All the ingredients required before you begin. |
-| 3 | **Setup Ceremony** | A formal setup ceremony to ensure your company's bitcoin keys are generated in a secure environment. |
-| 4 | **Receive a Transaction** | How to safely receive incoming transactions from third parties. |
-| 5 | **Send a Transaction** | How to coordinate a secure outgoing transaction. |
-| 6 | **Hardware Wallet Recovery** | How to restore a hardware wallet in the event of a hardware failure. |
-| 7 | **Hardware Wallet Replacement** | Emergency procedures in the event of hardware wallet or seed loss, and how to replace a hardware wallet in the event of a signatory termination or death. |
-| 8 | **Appendix** | All the extra background information that we ultimately decided to trim from the main protocol. Includes the kitchen sink.
-
-| Note |
-| - |
-| When following the Cerberus Protocol, it's okay to read ahead, but bear in mind that the protocol is designed **so that you complete each task before moving onto the next one**. Trying to skip ahead and complete tasks to save time can lead to confusion and mistakes, potentially compromising the security of your bitcoin storage. |
+* Three trusted individuals within your organization (signatories)
+* Three hardware wallets (Trezor One)
+* Laptop computers for each signatory
+* Secure physical storage (home safes and safe deposit boxes)
+* Approximately 8-10 hours total time commitment (preparation and setup)
+* Various supplementary equipment (detailed in the Preparation section)
 
 ## Warnings & Disclaimers
 
@@ -105,7 +72,11 @@ The protocol is split into eight sections:
 The Cerberus protocol is used at your own risk, and the authors and contributors accept no responsibility for any losses incurred as part of the protocol's usage.
 
 ### Legal Support
-Although the Cerberus is designed to minimise any potential conflicts, the protocol should still be supported by robust legal agreements between employee and the company, outlining each participant's obligations for the responsible management of funds. These agreements are beyond both the scope of this protocol and the expertise of the authors. However, should the protocol prove to be popular, we hope that some enterprising lawyers would open source some template documents!
+Although the Cerberus Protocol is designed to minimize potential conflicts, it should be supported by robust legal agreements between employees and the organization, outlining each participant's obligations for the responsible management of funds. These agreements are beyond the scope of this protocol.
 
-### Accuracy of Terminology
-To ensure the protocol is quickly comprehensible for newcomers to bitcoin, we have simplified some of the key terminology and definitions. Some keen-eyed bitcoiners may take issue with these compromises, but we feel they the loss of hyper-accuracy is a worthy tradeoff to ensure that secure storage is as accessible as possible.
+### Version Status
+This protocol is under active development. Check for updates regularly and verify you are using the most current version before implementation.
+
+## Begin Your Implementation
+
+Start with the [0. Overview & Quick Reference](/0_quick_reference.md) for a complete map of the protocol and implementation guide.
